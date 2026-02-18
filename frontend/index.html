@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Bot</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- background video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="video/cloudsmoving.mp4" type="video/mp4" />
+  </video>
+
+  <!-- blur overlay -->
+  <div class="video-blur"></div>
+
+  <!-- content -->
+  <main class="content">
+    <h1>National Weather</h1>
+    <p>Created By: Meira Barlow</p>
+
+    <div class="inputs">
+    <input type="text" required id="city" placeholder="Enter city name" />
+    <input
+      type="text"
+      id="state"
+      placeholder="State (abbr, ex. TN)"
+      maxlength="2"
+    /> 
+  </div>
+    <button id="weatherBtn">Get Weather</button>
+
+
+    <p id="result"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
