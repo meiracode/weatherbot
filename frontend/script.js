@@ -45,10 +45,10 @@ function getWeather() {
           text = "City not found. Please try again.";
         } else {
           text = `Weather in ${data.name}:
-${capitalizeWords(data.weather[0].description)}
-${data.main.temp}°C (feels like ${data.main.feels_like}°C)
-Wind: ${data.wind.speed} m/s
-Humidity: ${data.main.humidity}%`;
+          ${capitalizeWords(data.weather[0].description)}
+          ${data.main.temp}°C (feels like ${data.main.feels_like}°C)
+          Wind: ${data.wind.speed} m/s
+          Humidity: ${data.main.humidity}%`;
         }
 
         result.innerText = text;
