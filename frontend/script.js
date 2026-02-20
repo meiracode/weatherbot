@@ -32,7 +32,7 @@ function getWeather() {
   result.classList.remove("show");
   result.innerText = "";
 
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${apiKey}`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=${apiKey}`)
     .then(res => res.json())
     .then(data => {
       if (!data.main) {
@@ -41,9 +41,10 @@ function getWeather() {
         result.innerText =
 `Weather in ${data.name}:
 ${capitalizeWords(data.weather[0].description)}
-${data.main.temp}°C (feels like ${data.main.feels_like}°C)
-Wind: ${data.wind.speed} m/s
-Humidity: ${data.main.humidity}%`;
+${data.main.temp}°F 
+feels like ${data.main.feels_like}°F
+Wind Speed: ${data.wind.speed} mph
+Humidity %: ${data.main.humidity}%`;
       }
 
       requestAnimationFrame(() => {
